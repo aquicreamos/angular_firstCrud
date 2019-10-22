@@ -1,0 +1,45 @@
+<div class="row center-xs">
+  <div class="col-xs-6">
+    <div class="box">
+      <form #usersForm="ngForm" (ngSubmit)="addUser(usersForm)">
+        <div class="example-container">
+          <div class="col-md-12">
+            <mat-form-field>
+              <input matInput placeholder="Cedula" name="code" #code="ngModel" [(ngModel)]="userService.selectedUser.code">
+            </mat-form-field>
+          </div>
+          <div class="col-md-12">
+            <mat-form-field>
+              <input matInput placeholder="Nombre" name="name" #name="ngModel" [(ngModel)]="userService.selectedUser.name">
+            </mat-form-field>
+          </div>
+          <div class="col-md-12">
+            <mat-form-field>
+              <input matInput placeholder="Apellido" name="lastname" #lastname="ngModel" [(ngModel)]="userService.selectedUser.lastname">
+            </mat-form-field>
+          </div>
+          <div class="col-md-12">
+            <mat-form-field>
+              <input matInput placeholder="Celular" name="mobile" #mobile="ngModel" [(ngModel)]="userService.selectedUser.mobile">
+            </mat-form-field>
+          </div>
+          <div class="col-md-12">
+            <mat-form-field>
+              <input matInput placeholder="Email" name="email" #email="ngModel" [(ngModel)]="userService.selectedUser.email">
+            </mat-form-field>
+          </div>
+
+
+          <div class="col-md-12">
+            <mat-form-field>
+              <mat-select placeholder="Validación">
+                <mat-option value="active">Active</mat-option>
+                <mat-option value="inactive">Inactive</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
