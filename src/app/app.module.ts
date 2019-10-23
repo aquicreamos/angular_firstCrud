@@ -3,42 +3,52 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { UsersComponent } from './user/component/users/users.component';
-import { UserDetailComponent } from './user/component/user-detail/user-detail.component';
-import { UserService } from './core/services/user.service';
-import { MaterialModule } from './material/material.module';
-import { FormsModule } from "@angular/forms";
-import { HttpClient } from '@angular/common/http';
+import { ProductsComponent } from './products/products.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductAddComponent } from './product-add/product-add.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {
+  MatInputModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatSortModule,
+  MatTableModule,
+  MatIconModule,
+  MatButtonModule,
+  MatCardModule,
+  MatFormFieldModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent,
-    UserDetailComponent,
+    ProductsComponent,
+    ProductDetailComponent,
+    ProductAddComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModule,
     FormsModule,
-    HttpClient,
-    HttpClientModule
-  ],
-  exports: [
-    BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    FormsModule,
-    HttpClient,
-    HttpClientModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule
   ],
-  providers: [
-    UserService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
